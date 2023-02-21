@@ -11,7 +11,7 @@ if [[ ! -z  $pid ]]; then
   eval `ssh-agent`
   sleep 2
   echo "setting up ssh-key"
-  ssh-add ~/.ssh/gdorke@wls2debian
+  ssh-add ~/path/to/ssh/kay
   sleep 2
   git commit $1
 fi
