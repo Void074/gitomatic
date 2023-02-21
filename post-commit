@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+echo "pushing latest commit to remote repository"
+git push origin main
+exit 0
