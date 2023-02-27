@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-current_branch=$(git rev-parse --abbrev-ref HEAD)
+## As of Git 2.22 and above
+## CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+CURRNET_BRANCH=$(git branch --show-current) # alternative git rev-parse --abbrev-ref HEAD
 echo "pushing latest commit to remote repository"
-git push origin $current_branch
+git push origin "$CURRENT_BRANCH"
 exit 0
