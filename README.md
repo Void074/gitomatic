@@ -12,8 +12,18 @@ Firstly, if you have already set up git in project, all you have to do is:
 
 1. move the post-commit hook to the .git/hook/ folder
 2. once step one is completed, move the push.sh script to the project you are working in. **PLEASE ENSURE THAT YOU ADD THE PUSH.SH SCRIPT TO THE .GITIGNORE FILE IN YOUR PROJECT, SO THAT GIT DOESN'T TRACK IT**
-3. just run the push.sh script, ensuring that you have added the path to your private key, to commit changes made to the repository and the post-commit hook will automatically push the changes you have commited to either Github, BitBucket or Gitlab.
+3. just run the push.sh script and watch the post-commit hook automatically push code to your Github, GitLab, BitBucket or local git repository.
 
 ## How it works?
 
-The post-commit hook will automatically push changes to Github, GitLabs, Bitbucket after running the push.sh script. The push.sh script will handle setting the ssh-agent and path to your private. To add the path of your private ssh key, the open the push.sh script file enter the path to your private.
+The post-commit hook will automatically push changes to Github, GitLabs, Bitbucket after running the push.sh script. The push.sh script takes care of checking:
+
+1. SSH Service
+2. Allows you add commits without having to type in "git commit -m"
+
+## Todo
+
+- [ ] fix up documentation
+  - [ ] add screenshots or a link to a video tutorial
+- [ ] Work out other features or improvements that can be implemented
+- [ ] reorganize code base to reflect something similar to the C programming style
